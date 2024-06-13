@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Form examples</h1>
+    <h2>Simple form</h2>
+    <form action="/hi">
+        <p>
+            <label for="username">Enter your username : </label>
+            <input type="text" placeholder=" Username" id="username">
+        </p>
+        <p>
+            <label for="password">Enter your password : </label>
+            <input type="password" placeholder=" Password" id="password">
+        </p>
+        <p>
+            <label for="num">Enter your age : </label>
+            <input type="number" placeholder=" Age" id="name">
+        </p>
+        <p>
+            <label for="date">Enter your Birthdate : </label>
+            <input type="date" id="date">
+        </p>
+        <p>
+            <label for="address">Enter your address :</label><br>
+            <textarea name="Address" id="address" cols="40" rows="10"></textarea>
+        </p>
+        <p>
+            <label for="color">Choose your favourite color : </label>
+            <input type="color" id="color">
+        </p>
+        <p>
+            <label for="gender">Choose your gender : </label>
+            <input type="radio" name="male" id="MALE" value="male">
+            <label for="MALE">Male</label>
+            <input type="radio" name="female" id="FEMALE" value="female">
+            <label for="FEMALE">Female</label>
+            <input type="radio" name="others" id="OTHERS" value="others">
+            <label for="OTHERS">Others</label>
+        </p>
+        <p>
+            <label for="select">Select your region </label>
+            <select name="select" id="region">
+                <option value="Africa">Africa</option>
+                <option value="Asia">Asia</option>
+                <option value="North_America">North America</option>
+                <option value="Central_America">Central America</option>
+                <option value="South_America">South America</option>
+                <option value="Europe">Europe</option>
+                <option value="Middle_East">Middle East</option>
+                <option value="Pacific">Pacific</option>
+            </select>
+        </p>
+        <p>
+            <label for="Rate">Rate this form : </label>
+            <input type="range" id="Rate" name="rate" min="0" max="10">
+        </p>
+        <p>
+            <input type="checkbox" name="agree_term" id="agree">
+            <label for="agree">Agree to the terms and conditions</label>
+            <button>Submit</button>
+        </p>
+    </form>
+    <hr>
+    <h2>Mini search engines</h2>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+    <h3>Search YouTube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search YouTube</button>
+    </form>
+    <h3>Search Yahoo</h3>
+    <form action="https://search.yahoo.com/search">
+        <input type="text" name="q">
+        <button>Search Yahoo</button>
+    </form>
+    <hr>
+    <h2>Validation form</h2>
+    <form action="/hi">
+        <p>
+            <label for="uSername">Username</label>
+            <input type="text" id="uSername" required>
+        </p>
+        <p>
+            <label for="pAssword">Password</label>
+            <input type="password" id="pAssword" minlength="5" required>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+        </p>
+        <p>
+            <label for="url">Website</label>
+            <input type="url" id="url" required>
+        </p>
+        <p><button>Submit</button></p>
+    </form>
+</body>
+
+</html>

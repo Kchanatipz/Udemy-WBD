@@ -1,0 +1,19 @@
+<%- include('components/head')%>
+<body>
+  <%- include('components/navbar')%>
+  <div class="container">
+    <h2>Browsing the <%= name %> subreddit</h2>
+    <h3><%= description %></h3>
+    <p>Total : <%= subscribers %> subscribers</p>
+    <hr />
+    <% for( let post of posts ) { %>
+    <p>
+      <%= post.title %> <i><b>by <%= post.author %></b></i>
+      <% if (post.img) { %>
+      <img src="<%= post.img %>" alt="" />
+      <% } %>
+    </p>
+    <% } %>
+  </div>
+</body>
+<%- include('components/footer')%>

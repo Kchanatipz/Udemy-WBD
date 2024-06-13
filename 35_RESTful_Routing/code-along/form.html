@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form page</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+      }
+      h2 {
+        margin-top: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>RESTful routing</h1>
+    <h2>GET request</h2>
+    <form action="http://localhost:3000/order" method="get">
+      <input type="text" name="food" placeholder="food" required />
+      <input type="number" name="qty" placeholder="quantity" required />
+      <button>Submit</button>
+    </form>
+    <h2>POST request</h2>
+    <form action="http://localhost:3000/order" method="post">
+      <input type="text" name="food" placeholder="food" required />
+      <input type="number" name="qty" placeholder="quantity" required />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

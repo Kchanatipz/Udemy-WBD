@@ -1,0 +1,13 @@
+<%- include('components/head')%>
+<body>
+  <%- include('components/navbar')%>
+  <div class="container">
+    <h3>All cats are</h3>
+    <ul>
+      <% for( let cat of cats ) { %>
+      <li><%= cat %></li>
+      <% } %>
+    </ul>
+  </div>
+</body>
+<%- include('components/footer')%>

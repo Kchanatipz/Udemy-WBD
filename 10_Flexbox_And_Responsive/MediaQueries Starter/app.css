@@ -1,0 +1,61 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+    color: hotpink;
+}
+
+nav {
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul,
+li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    border: 2px solid cornflowerblue;
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+    h1 {
+        font-size: 4em;
+        color: cornflowerblue;
+    }
+
+    nav,
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        align-content: space-evenly;
+        border: none;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 3em;
+        color: indigo;
+    }
+}

@@ -22,7 +22,7 @@ const categories = ["Fruit", "Vegetable", "Dairy", "Meat", "Grain"];
 // desc   show all products
 // route  GET /products
 // or
-// deac   show products by category
+// desc   show products by category
 // route  GET /products?category=...
 app.get("/products", async (req, res) => {
   let cate = req.query.category;

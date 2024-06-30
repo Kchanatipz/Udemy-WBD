@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= product.name %></title>
+    <style>
+      #back {
+        padding: 10px;
+        background-color: seagreen;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #edit {
+        padding: 10px;
+        background-color: blueviolet;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #related {
+        padding: 10px;
+        background-color: #cbb036;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #delete {
+        margin-top: 5px;
+        padding: 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #details {
+        padding: 5px;
+        background-color: #4e97cb;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><%= product.name %></h2>
+    <ul>
+      <li>Price : $ <%= product.price %></li>
+      <li>Category : <%= product.category %></li>
+      <li>
+        Farm : <%= product.farm.name %>
+        <a href="/farms/<%= product.farm._id %>"
+          ><button id="details">See more</button></a
+        >
+      </li>
+    </ul>
+    <a href="/products" style="color: seagreen"
+      ><button id="back">Go back</button></a
+    >
+    <a href="/products/<%= product.id %>/edit" style="color: blueviolet"
+      ><button id="edit">Edit product</button></a
+    >
+    <a href="/products?category=<%= product.category %>"
+      ><button id="related">See related products</button></a
+    >
+    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+      <button id="delete">Delete product</button>
+    </form>
+  </body>
+</html>

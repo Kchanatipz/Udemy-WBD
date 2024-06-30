@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= farm.name %></title>
+    <style>
+      #back {
+        padding: 10px;
+        background-color: seagreen;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #edit {
+        padding: 10px;
+        background-color: blueviolet;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #add {
+        padding: 10px;
+        background-color: #cbb036;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #delete {
+        margin-top: 5px;
+        padding: 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #details {
+        padding: 5px;
+        background-color: #4e97cb;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><%= farm.name %></h2>
+    <ul>
+      <li>City : <%= farm.city %></li>
+      <% if (farm.products.length) { %>
+      <li>
+        Products :
+        <ul>
+          <% for( let product of farm.products ) { %>
+          <li>
+            <%= product.name %> - <i>$ <%= product.price %></i>
+            <a href="/products/<%= product._id %>"
+              ><button id="details">See more</button></a
+            >
+          </li>
+          <% } %>
+        </ul>
+      </li>
+      <% } %>
+    </ul>
+    <a href="/farms"><button id="back">Go back</button></a>
+    <a href="/farms/<%= farm._id %>/products/new"
+      ><button id="add">Add products to farm</button></a
+    >
+    <form action="/farms/<%= farm.id %>?_method=DELETE" method="POST">
+      <button id="delete">Delete farm</button>
+    </form>
+  </body>
+</html>

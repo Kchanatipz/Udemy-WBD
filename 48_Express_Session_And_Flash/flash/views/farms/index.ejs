@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farms</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+      #details {
+        padding: 5px;
+        background-color: #4e97cb;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+      #create {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #home {
+        padding: 10px;
+        background-color: #f18808;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>All Farms</h2>
+    <%= messages %>
+    <ul>
+      <% for( let farm of farms ) { %>
+      <li>
+        <%= farm.name %> - <i> <%= farm.city %></i>
+        <a href="/farms/<%= farm._id %>"
+          ><button id="details">See more</button></a
+        >
+      </li>
+      <% } %>
+    </ul>
+    <a href="/farms/new"><button id="create">Create new farm</button></a>
+  </body>
+</html>

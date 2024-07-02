@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Farm</title>
+    <style>
+      div {
+        margin-bottom: 10px;
+      }
+      #submit {
+        margin-top: 5px;
+        padding: 10px;
+        background-color: #56b729;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #cancel {
+        margin-top: 5px;
+        padding: 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Add new farm</h2>
+    <form action="/farms" method="POST">
+      <div>
+        <label for="name">Farm Name</label>
+        <input
+          type="text"
+          name="name"
+          required
+          id="name"
+          placeholder="farm name"
+          required
+        />
+      </div>
+      <div>
+        <label for="city">City</label>
+        <input
+          type="text"
+          name="city"
+          required
+          id="city"
+          placeholder="city"
+          required
+        />
+      </div>
+      <button id="submit">Submit</button>
+    </form>
+    <div>
+      <a href="/farms"><button id="cancel">Cancel</button></a>
+    </div>
+  </body>
+</html>
